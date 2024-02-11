@@ -3,6 +3,7 @@ import WorkoutDet from "../components/WorkoutDet"
 import WorkoutForm from "../components/WorkoutForm"
 import { useWorkoutContext } from "../hooks/useWorkoutsContext"
 import { useAuthContext } from "../hooks/useAuthContext"
+import { URL } from "../App"
 
 
 const Home = () => {
@@ -14,7 +15,7 @@ const Home = () => {
   {
     const fetchworkout = async () =>
     {
-      const response = await fetch('/api/workout',{
+      const response = await fetch(`${URL}/api/workout`,{
         headers :{
            'Authorization' : `Bearer ${user.token}`
         }
