@@ -5,6 +5,8 @@ import Login from './pages/Login'
 import Signup from './pages/Signup'
 import { useAuthContext } from "./hooks/useAuthContext";
 
+export const URL = process.env.REACT_APP_SERVER_URL
+
 
 function App() {
   const {user} = useAuthContext()
