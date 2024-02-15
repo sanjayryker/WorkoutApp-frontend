@@ -28,9 +28,9 @@ const WorkoutDet = ({workout}) => {
   return (
     <div className='workout-details'>
     <h4> {workout.title}</h4>
-    <p><strong> Load :  </strong> {workout.load}</p>
-    <p><strong> Reps :  </strong> {workout.reps}</p>
-    <p>{formatDistanceToNow(new Date(workout.createdAt),{addSuffix : true})}</p>
+    <p><strong> Load : &nbsp; </strong> {workout.load}</p>
+    <p><strong> Reps : &nbsp; </strong> {workout.reps}</p>
+    <p className="timestamp">{formatDistanceToNow(new Date(workout.createdAt),{addSuffix : true})}</p>
     <span  className="material-symbols-outlined"  onClick={handleClick}>Delete</span>
     </div>
     

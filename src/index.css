@@ -26,6 +26,13 @@ header a {
   color: #333;
   text-decoration: none;
 }
+
+@media only screen and (max-width:768px){
+  header h1{
+    font-size: 1.2rem;
+  }
+}
+
 .pages{
   max-width: 1400px;
   padding: 20px;
@@ -67,18 +74,36 @@ header a {
   color: #333;
 }
 
+@media only screen and (max-width:768px){
+  
+  .home{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+  .workout-details h4 {
+    font-size: 1rem;
+  }
+  .workout-details p {
+    font-size: 0.8rem;
+  }
+  .timestamp{
+    padding-top: 10px;
+  }
+}
+
 /* new workout form */
 label, input {
   display: block;
 }
 input {
-  padding: 10px;
   margin-top: 10px;
   margin-bottom: 20px;
   width: 100%;
   border: 1px solid #ddd;
   border-radius: 4px;
   box-sizing: border-box;
+  padding: 10px;
 }
 form button {
   background: var(--primary);
@@ -97,8 +122,32 @@ div.error {
   border-radius: 4px;
   margin: 20px 0;
 }
-input.error {
-  border: 1px solid var(--error);
+
+@media only screen and (max-width:768px){
+  
+
+  label {
+    font-size: 0.9rem;
+  }
+  input {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 8px;
+  }
+  form button {
+    padding: 8px;
+    font-size: 0.8rem;
+    width: 100%;
+  }
+  form h3{
+    text-align: center;
+  }
+  div.error {
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 8px;
+    margin: 20px 0 0 0;
+  }
 }
 
 /* navbar */
@@ -109,6 +158,14 @@ nav {
 nav a {
   margin-left: 10px;
 }
+
+.link{
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 6px 10px;
+  font-size: 1rem;
+}
+
 nav button {
   background: #fff;
   color: var(--primary);
@@ -121,6 +178,21 @@ nav button {
   margin-left : 10px;
 }
 
+@media only screen and (max-width:768px){
+  .link{
+    padding: 4px 6px;
+    font-size: 0.7rem;
+  }
+
+  nav button{
+    padding: 4px 6px;
+    font-size: 0.7rem;
+  }
+  nav span{
+    display: none;
+  }
+}
+
 /* auth forms */
 form.signup, form.login {
   max-width: 400px;
@@ -128,4 +200,15 @@ form.signup, form.login {
   padding: 20px;
   background: #fff;
   border-radius: 4px;
+}
+
+@media only screen and (max-width:768px){
+    .login label,.signup label {
+          font-size: 0.8rem;
+    } 
+
+    .login button, .signup button{
+      font-size: 0.6rem;
+      width: 100%;
+    }
 }
